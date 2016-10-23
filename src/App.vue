@@ -1,25 +1,23 @@
 <template>
     <div id="app">
-        <router-view class="content-view"></router-view>
-        <app-tabs></app-tabs>
+        <tabs></tabs>
+        <div class="content">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
-<script>
-    import AppContent from "./components/AppContent.vue"
-    import AppTabs from "./components/AppTabs.vue"
+<script type="text/ecmascript-6">
+    import Tabs from "./components/tabs.vue"
+    import "./assets/less/site.less"
     export default {
         data () {
             return {
+
                 msg: 'Hello Vue!'
             }
         },
-        components: {AppContent, AppTabs}
+        components: {Tabs}
     }
 </script>
 
-<style>
-    body {
-        font-family: Helvetica, sans-serif;
-    }
-</style>

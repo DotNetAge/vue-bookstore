@@ -23,6 +23,22 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
+                test: /\.css/,
+                loader: "style!css"
+            },
+            {
+                test: /\.less$/,
+                loader: "style!css!less"
+            },
+            {
+                test: /\.json$/,
+                loader: "json"
+            },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url'
+            },
+            {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file',
                 query: {
@@ -40,7 +56,7 @@ module.exports = {
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map';
-    
+
     // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({

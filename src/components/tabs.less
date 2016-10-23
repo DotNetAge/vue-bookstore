@@ -1,0 +1,30 @@
+.tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #000;
+  width: 100%;
+
+  & > ul, & > ul > li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    display: table;
+    width: 100%;
+    & > li {
+      text-align: center;
+      font-size: 10px;
+      display: table-cell;
+      padding: 8px 12px;
+      &.active {
+        color: #D0021B;
+      }
+
+    }
+  }
+}
+
+
