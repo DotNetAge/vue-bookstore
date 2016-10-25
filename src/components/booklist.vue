@@ -4,12 +4,12 @@
             <div class="heading">{{ heading }}</div>
             <div class="more">更多...</div>
         </div>
-        <div>
+        <div class="book-items">
             <router-link class="book" v-for="book in books"
                          tag="div"
                          :to="{ name:'book-detail' , params:{ id: book.id } }">
                 <div class="cover">
-                    <img :src="book.cover"/>
+                    <img :src="book.img_url"/>
                 </div>
                 <div class="title">{{ book.title }}</div>
                 <div class="authors">{{ book.authors | join }}</div>

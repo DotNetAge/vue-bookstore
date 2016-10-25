@@ -1,18 +1,52 @@
 .book-list {
+  margin: 0 14px;
   & > .header {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+
     & > .heading {
+      display: table-cell;
+      padding: 12px;
     }
 
     & > .more {
+      display: table-cell;
+      text-align: right;
+      vertical-align: middle;
+      font-size: 10px;
+      color: #cccccc;
+      padding-right: 14px;
     }
   }
 
+  & .book-items {
+    display: table;
+    width: 100%;
+    padding-top: 12px;
+  }
+
   & .book {
+    font-size: 10px;
+    text-align: center;
+    float: left;
+    width: 33%;
+    margin: 12px auto;
     & .cover {
     }
-    & .title {
+
+    & .title, & .authors {
+      margin: 5px auto;
+      width: 100px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
+
     & .authors {
+      color: #898989;
+      margin-top: 10px;
+      text-align: left;
     }
   }
 }

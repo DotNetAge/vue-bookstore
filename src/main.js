@@ -21,7 +21,7 @@ const router = new VueRouter({
         {path: '/categories', component: Category},
         {path: '/shopping-cart', component: ShoppingCart},
         {path: '/me', component: Me},
-        {path: '/books/:id', component: BookDetail,name:'book_detail'}
+        {path: '/books/:id', component: BookDetail, name: 'book_detail'}
     ]
 })
 

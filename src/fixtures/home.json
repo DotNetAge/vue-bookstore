@@ -3,14 +3,14 @@
     "text": "看看大神们都在用什么前端工具吧",
     "book_id": 1
   },
-  "slides": [
+  "top": [
     {
       "id": 7,
-      "img_url": "1.svg"
+      "img_url": "t1.svg"
     },
     {
       "id": 8,
-      "img_url": "2.svg"
+      "img_url": "t2.svg"
     }
   ],
   "promotions": [

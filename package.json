@@ -8,6 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "swiper": "^3.4.0",
     "vue": "^2.0.1",
     "vue-router": "^2.0.1"
   },

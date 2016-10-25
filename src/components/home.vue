@@ -1,19 +1,17 @@
 <template>
     <div v-if="page_data">
-        <div class="page-header">
+        <div class="section">
             <slider :slides="page_data.top"></slider>
+            <announcement label="快讯" content="今日上架的图书全部8折"></announcement>
         </div>
-        <div class="announces">
-            <announcement :announcement="page_data.announcement"></announcement>
-        </div>
-        <div class="recently">
-            <book-list :books="page_data.recently"
-                       :heading="最新更新">
+        <div class="section">
+            <book-list :books="page_data.promotions"
+                       heading="最新更新">
             </book-list>
         </div>
-        <div class="recommended">
+        <div class="section">
             <book-list :books="page_data.recommended"
-                       :heading="编辑推荐">
+                       heading="编辑推荐">
             </book-list>
         </div>
     </div>
@@ -23,6 +21,8 @@
     import Announcement from "./announcement.vue"
     import Slider from "./slider.vue"
     import BookList from "./booklist.vue"
+
+    import faker from "../fixtures/faker"
 
     export default{
         data () {
@@ -34,6 +34,8 @@
             document.title = "Book store"
         },
         created() {
+
+            this.page_data = faker.getHomeData()
 
 //            this.$http.get('/books/promotions', (res)=> {
 //                this.page_data = res.data

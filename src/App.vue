@@ -11,12 +11,6 @@
     import Tabs from "./components/tabs.vue"
     import "./assets/less/site.less"
     export default {
-        data () {
-            return {
-
-                msg: 'Hello Vue!'
-            }
-        },
         components: {Tabs}
     }
 </script>

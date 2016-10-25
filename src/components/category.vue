@@ -1,5 +1,7 @@
 <template>
-    <div>分类</div>
+    <div>
+        <h1>分类</h1>
+    </div>
 </template>
 <style></style>
 <script type="text/ecmascript-6">
