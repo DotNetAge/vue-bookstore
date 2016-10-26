@@ -7,7 +7,7 @@
         <div class="book-items">
             <router-link class="book" v-for="book in books"
                          tag="div"
-                         :to="{ name:'book-detail' , params:{ id: book.id } }">
+                         :to="{ name:'BookDetail' , params:{ id: book.id } }">
                 <div class="cover">
                     <img :src="book.img_url"/>
                 </div>

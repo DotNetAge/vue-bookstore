@@ -1,12 +1,14 @@
 <template>
-    <div class="swiper-container" ref="slider">
+    <div class="swiper-container"
+         ref="slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide"
                  v-for="slide in slides">
                 <img :src="slide.img_url"/>
             </div>
         </div>
-        <div class="swiper-pagination" ref="pagination"></div>
+        <div class="swiper-pagination"
+             ref="pagination"></div>
     </div>
 </template>
 <style>
@@ -45,7 +47,6 @@
 <script type="text/ecmascript-6">
     import Swiper from "swiper"
     import 'swiper/dist/css/swiper.css'
-    //var _images = require.context('./assets/', false, /\.(png|jpg|gif|svg)$/);
 
     export default{
         props: ['slides'],
