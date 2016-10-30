@@ -4,12 +4,12 @@ import VueResource from 'vue-resource'
 import App from './App.vue'
 
 //import Home from './components/home.vue'
-import Category from './components/category.vue'
-import ShoppingCart from './components/shoppingcart.vue'
-import Me from './components/me.vue'
-import BookDetail from "./books/detail.vue"
+import Category from './Category.vue'
+import ShoppingCart from './Cart.vue'
+import Me from './Me.vue'
+import BookDetail from "./books/Detail.vue"
 
-const Home = resolve => require(['./components/home.vue'], resolve)
+const Home = resolve => require(['./Home.vue'], resolve)
 
 
 Vue.use(VueRouter)
