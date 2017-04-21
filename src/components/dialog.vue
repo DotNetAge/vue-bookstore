@@ -6,7 +6,7 @@
 			<div class="heading">
 				<slot name="heading"></slot>
 			</div>
-			<slot name="body"></slot>
+			<slot></slot>
 		</div>
 	</div>
 </template>

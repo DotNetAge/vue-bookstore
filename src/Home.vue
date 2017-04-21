@@ -19,16 +19,14 @@
             </book-list>
         </div>
  
-        <dlg ref="dialog">
-            <div slot="heading">
-                
-            </div>
-            <div slot="body">
+        <modal-dialog ref="dialog">
+            <div slot="heading"></div>
+            <div>
                 <div v-if="selected">
                     <h2>{{ selected.title }}</h2>
                 </div>
             </div>
-        </dlg>
+        </modal-dialog>
     </div>
 </template>
 <style>
@@ -56,7 +54,7 @@
 <script type="text/ecmascript-6">
     import Slider from "./components/slider.vue"
     import BookList from "./books/list.vue"
-    import Dialog from "./components/dialog.vue"
+    import ModalDialog from "./components/dialog.vue"
     import faker from "./fixtures/faker"
 
     export default{
@@ -80,7 +78,7 @@
 //            })
 
         },
-        components: {Slider, BookList,dlg:Dialog},
+        components: {Slider, BookList,ModalDialog},
         methods: {
             preview (book) {
                 this.selected = book
