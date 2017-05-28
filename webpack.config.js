@@ -8,44 +8,46 @@ module.exports = {
         publicPath: '/dist/',
         filename: 'build.js'
     },
-    resolveLoader: {
-        root: path.join(__dirname, 'node_modules')
-    },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'vue-loader'
             },
             {
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
                 test: /\.css/,
-                loader: "style!css"
+                loader: "style-loader!css-loader"
             },
             {
                 test: /\.less$/,
-                loader: "style!css!less"
+                loader: "style-loader!css-loader!less-loader"
             },
             {
                 test: /\.json$/,
-                loader: "json"
+                loader: "json-loader"
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url'
+                loader: 'url-loader'
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file',
+                loader: 'file-loader',
                 query: {
                     name: '[name].[ext]?[hash]'
                 }
             }
         ]
+    },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
     },
     devServer: {
         historyApiFallback: true,
